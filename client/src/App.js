@@ -9,8 +9,11 @@ import { Container, Row, Col } from "./components/Grid";
 
 class App extends Component {
   state = {
-    recipes: [],
-    recipeSearch: ""
+          title: "",
+          author: "",
+          description: "",
+          image: "",
+          link: ""
   };
 
   handleInputChange = event => {
@@ -65,7 +68,7 @@ class App extends Component {
           </Row>
           <Row>
             <Col size="xs-12">
-              {!this.state.recipes.length ? (
+              {!this.state.title.length ? (
                 <h1 className="text-center">No Recipes to Display</h1>
               ) : (
                 <RecipeList>
