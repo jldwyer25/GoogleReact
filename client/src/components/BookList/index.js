@@ -19,28 +19,17 @@ export function BookListItem({
   description,
   href,
   author = [""],
-  buttonText,
-  buttonFunc
+  children
 }) {
+
+// const handleClick = (event) => {
+//   event.preventDefault();
+//   buttonFunc();
+// }
+
   return (
-    <li className="list-group-item">
-      <Container>
-        <Row>
-          <Col size="xs-4 sm-2">
-            <Thumbnail src={thumbnail} />
-          </Col>
-          <Col size="xs-8 sm-9">
-            <h3>{title}</h3>
-            <h4>{author.join(', ')}</h4>
-            <p>Description: {description}</p>
-            <a rel="noreferrer noopener" target="_blank" href={href}>
-              Go to Book!
-            </a>
-          </Col>
-        </Row>
-      </Container>
-    </li>
-  );
+ <li className="list-group-item">{children}</li>
+ );
 }
 
 export default BookList
